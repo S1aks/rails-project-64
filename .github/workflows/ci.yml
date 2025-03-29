@@ -36,6 +36,8 @@ jobs:
 
       - name: Lint code for consistent style
         run: bin/rubocop -f github
+        run: bundle exec slim-lint app/views/
+
 
   test:
     runs-on: ubuntu-latest
