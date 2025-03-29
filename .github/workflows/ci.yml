@@ -35,8 +35,9 @@ jobs:
           bundler-cache: true
 
       - name: Lint code for consistent style
-        run: bin/rubocop -f github
-        run: bundle exec slim-lint app/views/
+        run: |
+          bin/rubocop -f github
+          bundle exec slim-lint app/views/
 
 
   test:
