@@ -16,4 +16,10 @@ html
     = javascript_include_tag "application", \
       "data-turbo-track": "reload", type: "module"
   body
-    = yield
+    = render 'layouts/nav'
+    main
+      - unless notice.nil?
+        p = notice
+      - unless alert.nil?
+        p = alert
+      = yield
